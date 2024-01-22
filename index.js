@@ -5,7 +5,7 @@
       const btn = document.getElementById("btn");
       const reset = document.getElementById("reset")
 // Access your API key (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI('AIzaSyA_l0sZVDcfyU75f2pEsujMpv7D9wEWfeM');
+const genAI = new GoogleGenerativeAI(<YOUR_API_KEY>);
 
 async function run() {
   // For text-only input, use the gemini-pro model
@@ -50,18 +50,3 @@ reset.onclick = () =>{
   res.innerHTML = ""
   inpdis.innerHTML = ""
 }
-
-// ------------------------------Hiding the data from users-------------------------------------------
-      document.addEventListener("keydown", function (event){
-          if (event.ctrlKey){
-            event.preventDefault();
-          }
-          if(event.keyCode == 123){
-            event.preventDefault();
-          }
-      });
-
-      document.addEventListener('contextmenu', 
-          event => event.preventDefault()
-      );
-// ---------------------------------------------------------------------------
